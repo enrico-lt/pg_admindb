@@ -13,4 +13,5 @@ The script set pg_admindb let's you deploy a PostgreSQL cluster on Windows Serve
 
 # Installation
 
-Modify all parametes in the 'Configuration Parameters' section of each script
+Copy all files in a directory of you server.
+Modify all parametes in the 'Configuration Parameters' section of each script.
