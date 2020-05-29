@@ -5,4 +5,12 @@ The script set pg_admindb let's you deploy a PostgreSQL cluster on Windows Serve
 - Script guided installation of PostgreSQL 12 and ODBC drive
 - pg_admindb as template database with many views to help with adminsitration
 - NTFS permissions set on all PostgrSQL related directories
+- Synchronize PostgreSQL roles with Active Directory Groups
 - Schedueld Backups with pg_dump
+- Scheduled maintenance task inspired by the maintenance solution for SQL Server by Ola Hallengren
+- Scheduled integrity check of PostgreSQL cluster after an unexpected shutdown
+- Scheduled management of log files
+
+# Installation
+
+Modify all parametes in the 'Configuration Parameters' section of each script
