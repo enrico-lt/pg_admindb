@@ -1,0 +1,69 @@
+<settings>
+  <!-- Last change 2020-05-29 -->
+
+  <!-- Logpath of log file -->
+  <logpath>E:\pg_admindb\logs\pg_ADSync</logpath>
+
+  <!-- PowerShell library for PostgreSQL -->
+  <lib>E:\pg_admindb\lib\powershell_postgresql_lib.psd1</lib>
+
+  <!-- Active Directory specific configuration -->
+  <ad>
+
+    <!-- The AD Group and Directory, which holds all user objects which should be synchronized 
+         You can enter the Distinguished Name (dn) or the Common Name (cn) to specify a group
+        <cn>ADGROUP</cn> would synchronize the group DOMAIN\ADGROUP.
+         
+         Please note that you should create the specified AD groups in PostgreSQL as roles with NOLOGIN first.
+         And grant the respective PostgreSQL permission to it. Then run the pg_ADSync Scheduled Task.
+         -->
+    <filter>
+      <group>
+        <dn>CN=Common Name,OU=Organisational Unit,OU=Organisational Unit,DC=DOMAIN,DC=loc</dn>
+      </group>
+      <!-- Example for group with dn
+      <group>
+        <dn>CN=Common Name,OU=Organisational Unit,OU=Organisational Unit,DC=DOMAIN,DC=loc</dn>
+      </group>
+      -->
+      <!-- Example for group with cn
+      <cngroup>
+        <cn>Only Common Name</cn>
+      </cngroup>
+      -->
+    </filter>
+
+  </ad>
+
+  <!-- PostgreSQL specific configuration -->
+  <database>
+
+    <!-- Roles that do exist in the database, but should be ignored (neither deleted nor updated) -->
+    <ignoredRoles>
+      <role name="system"/>
+      <role name="SYSTEM"/>
+      <role name="postgres"/>
+      <role name="db_owner"/>
+      <role name="db_datareader"/>
+      <role name="db_datawriter"/>
+      <role name="db_backupoperator"/>
+      <role name="db_dumper"/>
+      <role name="pg_signal_backend"/>
+      <role name="adsync"/>
+      <role name="PostgreSQL Service Account"/>
+    </ignoredRoles>
+
+    <!-- Adress and Port of the database server -->
+    <server>
+      <host>localhost</host>
+      <port>5432</port>
+    </server>
+    
+    <!-- Name of the relevant database -->
+    <name>pg_admindb</name>
+
+    <!-- Role name in PostgreSQL for AD Sync-->
+    <username>adsync</username>
+
+  </database>
+</settings>
