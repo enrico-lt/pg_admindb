@@ -1,5 +1,5 @@
 # pg_admindb
-The script set pg_admindb let's you deploy a PostgreSQL cluster on Windows Server easily and fast
+The script set pg_admindb let's you deploy a PostgreSQL cluster on Windows Server easily and fast with PowerShell
 
 # Features
 - Script guided installation of PostgreSQL 12 and ODBC drive
@@ -15,3 +15,10 @@ The script set pg_admindb let's you deploy a PostgreSQL cluster on Windows Serve
 
 Copy all files in a directory of you server.
 Modify all parametes in the 'Configuration Parameters' section of each script.
+
+If you really want to use this in your environment contact me and I can give you all the details you need to look at.
+
+# Requirements
+
+Windos Server 2016+
+Commuinity Windows Installer for PostgreSQL 12 from EnterpriseDB
