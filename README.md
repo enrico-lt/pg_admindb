@@ -20,5 +20,5 @@ If you really want to use this in your environment contact me and I can give you
 
 # Requirements
 
-Windos Server 2016+
+Windos Server 2016 or up
 Commuinity Windows Installer for PostgreSQL 12 from EnterpriseDB
