@@ -39,7 +39,7 @@ param(
 ################################################################################
 ########################### CONFIGURATION PARAMETERS ###########################
 ################################################################################
-$lastchange = "2020-05-29"
+$lastchange = "2020-07-09"
 
 # PostgreSQL major version
 $pgVersion = "12"
@@ -51,6 +51,7 @@ $logDirectories = @()
 $logDirectories += "$PgDataDir\log"
 $logDirectories += "E:\pg_admindb\logs\pg_full_backup"
 $logDirectories += "E:\pg_admindb\logs\pg_ADSync"
+$logDirectories += "E:\pg_admindb\logs\pg_base_backup"
 $logDirectories += "E:\pg_admindb\logs\pg_integrity_check"
 $logDirectories += "E:\pg_admindb\logs\pg_IndexOptimize"
 $logDirectories += "$logpath"

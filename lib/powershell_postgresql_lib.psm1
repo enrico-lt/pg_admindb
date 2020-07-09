@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     PostgreSQL DB Library for PowerShell
     filename powershell_postgresql_lib.psm1
@@ -172,7 +172,7 @@ Function writeErrorMessage ([string] $msg, [switch] $detail) {
 # Write Log Message or empty line to log file.
 # The variable $script:logfile has to be set before.
 Function writeLogMessage ([string] $msg) {
-  if ($script:logfile -eq '') {
+  if (($script:logfile -eq '')  -or (-not $script:logfile)) { {
     Write-Host $msg
   } else {
     if ($msg -ne "") {
@@ -427,12 +427,16 @@ Function execOdbcConnection {
 ####################################################################################
 # Try to get the version of PostgreSQL using ODBC. If connection is not
 # possible or other errors, an empty string is returned.
-Function getPgVersionOdbc ([int] $portNo = 5432) {
-  $dbserver = 'localhost'
-  $dbName = 'postgres'
-  $dbUser = ''
+Function getPgVersionOdbc () {
+  param(
+  [string] $dbserver = 'localhost'
+  ,[int] $portNo = 5432
+  ,[string] $dbName = 'postgres'
+  ,[string] $dbUser = ''
+  )
+  
   try {
-    $conn = openOdbcConnection $dbserver $dbName $dbUser $portNo
+    $conn = openOdbcConnection -dbServer $dbserver -dbName $dbName -userName $dbUser -portNo $portNo
     if ($conn -eq $null) {
       return ""
     }

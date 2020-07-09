@@ -85,7 +85,7 @@ AliasesToExport = '*'
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess
 PrivateData = @{
-  lastchange = "2020-05-29"
+  lastchange = "2020-07-09"
 }
 
 # HelpInfo URI of this module
