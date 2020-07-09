@@ -7,6 +7,7 @@ The script set pg_admindb let's you deploy a PostgreSQL cluster on Windows Serve
 - NTFS permissions set on all PostgrSQL related directories
 - Synchronize PostgreSQL roles with Active Directory Groups
 - Schedueld Backups with pg_dump
+- Scheduled Backups wit pg_basebackup and archived WAL file managemnt for PITR
 - Scheduled maintenance task inspired by the maintenance solution for SQL Server by Ola Hallengren
 - Scheduled integrity check of PostgreSQL cluster after an unexpected shutdown
 - Scheduled management of log files
