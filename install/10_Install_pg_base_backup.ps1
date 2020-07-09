@@ -4,7 +4,7 @@
 .DESCRIPTION
     Requires PostgreSQL Powershell library.
 .NOTES
-    Author:			Enrico La Torre / IIT Data Centre
+    Author:			Enrico La Torre
     Date:			  2020-07-02
 #>
 
