@@ -22,5 +22,5 @@ If you really want to use this in your environment contact me and I can give you
 # Requirements
 
 Windos Server 2016 or up
-
+7z.exe and 7z.dll files in .\pg_admindb\pg_log_mgmt
 Commuinity Windows Installer for PostgreSQL 12 from EnterpriseDB
